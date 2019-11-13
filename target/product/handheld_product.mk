@@ -32,5 +32,19 @@ PRODUCT_PACKAGES += \
     WallpaperCropper \
     frameworks-base-overlays
 
+ifeq ($(CURRENT_BUILD_TYPE), nogapps)
+PRODUCT_PACKAGES += \
+    Browser2 \
+    Calendar \
+    Contacts \
+    DeskClock \
+    Email \
+    Gallery2 \
+    LatinIME \
+    Launcher3QuickStep \
+    Music \
+    QuickSearchBox
+endif
+
 PRODUCT_PACKAGES_DEBUG += \
     frameworks-base-overlays-debug
